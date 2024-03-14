@@ -1,21 +1,17 @@
-### Các bước cần làm để chạy dự án NestJS
-
-#### 1. Cài đặt thư viện với câu lệnh: npm i
-#### 2. Chạy dự án với câu lệnh: npm run dev
-
-
-=================
-
-Tác giả: Hỏi Dân IT
-
-Mọi thông tin về Tác giả Hỏi Dân IT, các bạn có thể tìm kiếm tại đây:
-
-Website chính thức: https://hoidanit.com.vn/
-
-Youtube “Hỏi Dân IT” : https://www.youtube.com/@hoidanit
-
-Tiktok “Hỏi Dân IT” :  https://www.tiktok.com/@hoidanit
-
-Fanpage “Hỏi Dân IT” : https://www.facebook.com/askITwithERIC/
-
-Udemy Hỏi Dân IT: https://www.udemy.com/user/eric-7039/
+<!--
+  // "scripts": {
+  //   "build": "nest build",
+  //   "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+  //   "start": "nest start",
+  //   "dev": "nest start --watch",
+  //   "start:dev": "nest start --watch",
+  //   "start:debug": "nest start --debug --watch",
+  //   "start:prod": "node dist/main",
+  //   "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+  //   "test": "jest",
+  //   "test:watch": "jest --watch",
+  //   "test:cov": "jest --coverage",
+  //   "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
+  //   "test:e2e": "jest --config ./test/jest-e2e.json"
+  // },
+ -->
