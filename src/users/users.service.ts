@@ -13,7 +13,9 @@ export class UsersService {
     const salt = await bcrypt.genSalt();
     return bcrypt.hash(password, salt);
   }
-
+  async isValidPassword(password: string, hash: string): Promise<boolean> {
+    return await bcrypt.compare(password, hash);
+  }
   async create(createUserDto: CreateUserDto) {
     try {
       createUserDto.password = await this.hashPassword(createUserDto.password);
@@ -64,7 +66,7 @@ export class UsersService {
       const user = await this.UserModel.findOne({ _id: id });
       return {
         success: true,
-        message: {
+        content: {
           status: 200,
           message: 'User found successfully',
           data: user,
@@ -73,7 +75,7 @@ export class UsersService {
     } catch (err) {
       return {
         success: false,
-        message: {
+        content: {
           status: 400,
           message: `Can't find user with id: ${id}`,
         },
@@ -81,6 +83,27 @@ export class UsersService {
     }
   }
 
+  async findOneByUsername(username: string) {
+    try {
+      const user = await this.UserModel.findOne({ email: username });
+      return {
+        success: true,
+        content: {
+          status: 200,
+          message: 'User found successfully',
+          data: user,
+        },
+      };
+    } catch (err) {
+      return {
+        success: false,
+        content: {
+          status: 400,
+          message: `Can't find user with username: ${username}`,
+        },
+      };
+    }
+  }
   async update(id: string, updateUserDto: UpdateUserDto) {
     try {
       const user = await this.UserModel.findById({ _id: id });
